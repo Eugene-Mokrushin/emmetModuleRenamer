@@ -3,6 +3,11 @@
   "displayName": "Emmet Classes to Module",
   "description": "Rename classes to module classes",
   "publisher": "EugeneMK",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eugene-Mokrushin/emmetModuleRenamer"
+  },
+  "icon": "images/icon.png",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.80.0"
@@ -10,7 +15,16 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "keywords": [
+    "emmet",
+    "classes",
+    "module",
+    "rename"
+  ],
+  "activationEvents": [
+    "onCommand:emmet-classes-to-module.renameClassesToModuleClasses",
+    "onCommand:emmet-classes-to-module.renameModuleClassesToClasses"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
