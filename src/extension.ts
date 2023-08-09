@@ -150,7 +150,7 @@ function parseClassNames(value: string): string {
       .replaceAll("$", "");
     return finalClass;
   });
-  return final.join(" ");
+  return [...new Set(final)].join(" ");
 }
 export default activate;
 export { parseClassNames, getReplaceString, getFileExtension };

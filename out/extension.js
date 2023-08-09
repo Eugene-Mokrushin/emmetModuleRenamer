@@ -120,7 +120,7 @@ function parseClassNames(value) {
             .replaceAll("$", "");
         return finalClass;
     });
-    return final.join(" ");
+    return [...new Set(final)].join(" ");
 }
 exports.parseClassNames = parseClassNames;
 exports.default = activate;

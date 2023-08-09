@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.0.1]
+
+- Fixed duplicate renaming from Module -> Emmet i.e `<div className={`${module.foo} foo`}></div>` will not be transformed into `<div class="foo"></div>` instead of `<div class="foo foo"></div>`
+
 ## [1.0.0]
 
 ### Added
