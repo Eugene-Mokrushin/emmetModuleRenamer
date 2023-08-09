@@ -1,0 +1,23 @@
+import testCl from "test.module.less";
+
+function Main() {
+  return (
+    <main>
+      <h1 class="appTitle appTitle1 appTitle1 appTitle1">React App</h1>
+      <p class="subTitle">Tools for marketplaces</p>
+      <div class="marketplaces">
+        <ul class="ozon"></ul>
+        <div class="fnac">
+          <ul class="tools">
+            <li class="toolOption">Tool</li>
+            <li class="toolOption">Tool</li>
+            <li class="toolOption">Tool</li>
+          </ul>
+        </div>
+        <ul class="amazon">Amazon</ul>
+      </div>
+    </main>
+  );
+}
+
+export default Main;

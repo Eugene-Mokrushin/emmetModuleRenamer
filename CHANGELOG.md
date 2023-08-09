@@ -1,9 +1,17 @@
 # Change Log
 
-All notable changes to the "emmet-classes-to-module" extension will be documented in this file.
+## [1.0.0]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+### Added
 
-## [Unreleased]
+- Conversion back to emmet classes (i.e. from jsx/tsx -> html)
+- Simple tests for code validation
+
+### Fixed
+
+- Now the extensin could handle refactoring of more than 1 class pointer in one class at the time
+
+## [0.0.1]
 
 - Initial release
+

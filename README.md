@@ -39,6 +39,10 @@ This extension supports the following file types:
 - If import statements is commented or import statement doesn't have `.module`, the extension will not consider it during the replacement process and will simple perform the replacement with `className={styles.Something}`.
 
 
+## Bi-Directional Conversion and Enhanced Functionality
+- A new feature has been introduced to enable reverse conversion from module classes back to Emmet-style classes or HTML classes. Utilize the key combination `CTRL + SHIFT + ALT + E` to trigger this functionality.
+- The extension has been optimized to support the simultaneous conversion of multiple class pointers within a single class declaration.
+
 ## Feedback and Issues
 
 If you encounter any issues or have suggestions for improvements, please [submit an issue on GitHub](https://github.com/Eugene-Mokrushin/emmetModuleRenamer/issues).
@@ -50,3 +54,5 @@ Contributions are welcome! If you'd like to improve the extension, fix bugs, or 
 ## License
 
 This extension is licensed under the [MIT License](https://github.com/Eugene-Mokrushin/emmetModuleRenamer/blob/main/LICENSE).
+
+### Thanks ChatGPT for this MD file 🫠

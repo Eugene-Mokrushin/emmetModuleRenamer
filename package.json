@@ -3,7 +3,7 @@
   "displayName": "Emmet Classes to Module",
   "description": "Rename classes to module classes",
   "publisher": "EugeneMK",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -11,12 +11,16 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "emmet-classes-to-module.renameClassesToModuleClasses",
         "title": "Rename classes to module classes"
+      },
+      {
+        "command": "emmet-classes-to-module.renameModuleClassesToClasses",
+        "title": "Rename module classes to classes"
       }
     ],
     "keybindings": [
@@ -24,23 +28,33 @@
         "command": "emmet-classes-to-module.renameClassesToModuleClasses",
         "key": "ctrl+shift+alt+m",
         "mac": "cmd+shift+alt+m"
+      },
+      {
+        "command": "emmet-classes-to-module.renameModuleClassesToClasses",
+        "key": "ctrl+shift+alt+e",
+        "mac": "cmd+shift+alt+e"
       }
     ]
   },
   "scripts": {
-    "lint": "eslint .",
-    "pretest": "npm run lint",
-    "test": "node ./test/runTest.js"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.1",
     "@types/node": "20.2.5",
+    "@types/vscode": "^1.80.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "@vscode/test-electron": "^2.3.4",
     "eslint": "^8.41.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.1.3",
-    "@vscode/test-electron": "^2.3.2"
+    "typescript": "^5.1.3"
   }
 }

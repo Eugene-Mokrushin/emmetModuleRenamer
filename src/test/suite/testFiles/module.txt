@@ -1,0 +1,23 @@
+import testCl from "test.module.less";
+
+function Main() {
+  return (
+    <main>
+      <h1 className={`${testCl.appTitle} ${testCl.appTitle1} ${testCl.appTitle1} ${testCl.appTitle1}`}>React App</h1>
+      <p className={testCl.subTitle}>Tools for marketplaces</p>
+      <div className={testCl.marketplaces}>
+        <ul className={testCl.ozon}></ul>
+        <div className={testCl.fnac}>
+          <ul className={testCl.tools}>
+            <li className={testCl.toolOption}>Tool</li>
+            <li className={testCl.toolOption}>Tool</li>
+            <li className={testCl.toolOption}>Tool</li>
+          </ul>
+        </div>
+        <ul className={testCl.amazon}>Amazon</ul>
+      </div>
+    </main>
+  );
+}
+
+export default Main;
